@@ -1,15 +1,38 @@
 /*
 font-family: 'Lato', sans-serif;
 */
+body {
+    padding-top:200px;
+}
 
-div#container {}
+div#container {
+    width:45%;
+    margin:auto;
+    text-align:center;
+    border:2px solid #1F1F1F;
+    border-radius:5px;
+    padding:50px 0;
+}
 
-#container h1 {}
-#container h2 {}
+#container h1,
+#container h3{
+    font-family: 'Lato', sans-serif;
+}
+#container h1 { font-size:3em; }
+#container h3 { font-size:1.5em; }
 
 div#input {}
 #input input[type="text"] {}
 #input button {}
 
-div#pi-display {}
-#pi-display p {}
+div#pi-display {
+    width:50%;
+    margin:auto;
+    background-color:rgba(0,0,0,0.1);
+    text-align:left;
+}
+
+#pi-display p { 
+    font-family: monospace;
+    font-size:2em; 
+}

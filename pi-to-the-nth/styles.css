@@ -1,3 +1,15 @@
 /*
 font-family: 'Lato', sans-serif;
 */
+
+div#container {}
+
+#container h1 {}
+#container h2 {}
+
+div#input {}
+#input input[type="text"] {}
+#input button {}
+
+div#pi-display {}
+#pi-display p {}

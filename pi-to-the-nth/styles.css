@@ -2,7 +2,7 @@
 font-family: 'Lato', sans-serif;
 */
 body {
-    padding-top:200px;
+    padding:100px 0;
     background:url(spiration-light.png) repeat;
     font-family: 'Lato', sans-serif;
 }
@@ -10,11 +10,12 @@ body {
 div#container {
     width:45%;
     margin:auto;
+    padding:50px 0;
     text-align:center;
     background-color:#FFF;
-    border:2px solid #1F1F1F;
+    border:1px solid #1F1F1F;
     border-radius:10px;
-    padding:50px 0;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
 }
 
 img {
@@ -28,7 +29,7 @@ img {
     font-family: 'Lato', sans-serif;
 }
 #container h1 { font-size:3em; }
-#container h3 { font-size:1.5em; }
+#container h3 { font-size:1.5em; font-weight:normal; }
 
 div#input {
     width:50%;
@@ -76,9 +77,18 @@ div#pi-display {
     overflow:hidden;
 }
 
+#pi-display #error {  
+    color: red;
+    font-size:1em;
+    transition:0.3s;
+    display:none;
+}
+
+#pi-display #error,
 #pi-display p { 
-    font-family: monospace;
-    font-size:2em; 
+    font-family: 'Courier', monospace;
     padding:0px 20px;
     word-wrap:break-word;
 }
+
+#pi-display p  { font-size:2em; }

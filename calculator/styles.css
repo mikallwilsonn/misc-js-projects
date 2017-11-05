@@ -33,9 +33,18 @@ body {
     letter-spacing:2.75px;
     text-align:right;
     height:75px;
+    width:90%;
     box-sizing:border-box;
     padding:25px;
     border-radius:5px;
+}
+
+#waiting {
+    animation: 1s infinite blinker;
+}
+@keyframes blinker {
+    from { opacity:1; }
+    to { opacity:0; }
 }
 
 
@@ -54,7 +63,7 @@ body {
 
 .button:active {
     border:0;
-    box-shadow: inset 0px 5px 15px -5px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.2);
 }
 
 .utility {

@@ -39,6 +39,14 @@ body {
     border-radius:5px;
 }
 
+#waiting {
+    animation: 1s infinite blinker;
+}
+@keyframes blinker {
+    from { opacity:1; }
+    to { opacity:0; }
+}
+
 
 .button {
     box-sizing:border-box;

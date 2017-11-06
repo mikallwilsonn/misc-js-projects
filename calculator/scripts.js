@@ -56,9 +56,13 @@ for( let i = 0; i < operator.length; i++ ) {
     operator[ i ].addEventListener('click', function() {
         removeWaiting();
         if ( this.getAttribute( 'data-value' ) === '=' ) {
-            let equasion = display.textContent.toString();
-            let evaluate = eval(equasion);
-            display.textContent = evaluate;
+            if ( display.textContent === "" ) {
+                display.innerHTML = blinker;
+            } else {
+                let equasion = display.textContent.toString();
+                let evaluate = eval(equasion);
+                display.textContent = evaluate;
+            }
         } else if ( display.textContent === "" ) {
             display.innerHTML = blinker;
         } else {

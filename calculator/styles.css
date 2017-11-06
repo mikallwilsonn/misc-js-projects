@@ -16,6 +16,7 @@ body {
     box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
     border-radius:10px;
     display:inline-block;
+    max-width:420px;
 }
 
 #calculator section {
@@ -37,6 +38,8 @@ body {
     box-sizing:border-box;
     padding:25px;
     border-radius:5px;
+    overflow-x:scroll;
+    overflow-y: hidden;
 }
 
 #waiting {

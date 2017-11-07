@@ -78,7 +78,7 @@ section h2 {}
     margin-top:25px;
 }
 
-#set-alarm input {
+#set-alarm select {
     outline:none !important;
     letter-spacing:2px;
     font-size:1.2em;

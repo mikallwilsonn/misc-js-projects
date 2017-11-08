@@ -11,18 +11,17 @@
             <h1>Clock &amp; Stopwatch</h1>
             <section id="clock-section">
                 <h2>Current Time</h2>
-                <div id="clock">
+                <div id="clock" class="">
                     <span id="time"></span>
                     <span id="date"></span>
                 </div>
                 <div id="set-alarm">
-                    <select id="select-hour">
-
-                    </select>
-                    <select id="select-minute">
-                            
-                     </select>
-                    <button type="submit">SET ALARM</button>
+                    <select id="select-hour"></select>
+                    <select id="select-minute"></select>
+                    <button type="submit" id="submitAlarm">SET ALARM</button>
+                </div>
+                <div id="upcoming-alarm">
+                    <span></span>
                 </div>
             </section>
 
@@ -37,6 +36,9 @@
                         <button id="reset-timer">RESET</button>
                     </div>
             </section>
+        </div>
+        <div id="alarm-sound">
+            <audio src="alarm.wav" controls preload="auto" autobuffer></audio>
         </div>
         
         <script src="scripts.js"></script>

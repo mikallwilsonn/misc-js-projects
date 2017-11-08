@@ -18,6 +18,7 @@ section h2,
 #date,
 #set-alarm input,
 #set-alarm button,
+#upcoming-alarm span, 
 #stopwatch-controls button { font-family: 'Raleway', sans-serif !important; }
 
 #time,
@@ -62,6 +63,28 @@ section h2 {}
     margin:auto;
 }
 
+.alarm-flash {
+    animation-name: alarmFlash;
+    animation-duration: 0.5s;
+    animation-iteration-count:15;
+    box-sizing:border-box;
+}
+
+@keyframes alarmFlash {
+    0% {
+        border:5px solid #FF7474;
+        box-shadow: 0px 0px 55px 0px rgba(255,116,116,1);
+    }
+    50% {
+        border:5pxpx solid #FF7474;;
+        box-shadow: 0px 0px 55px 10px rgba(255,116,116,1);
+    }
+    100% {
+        border:5px solid #FF7474;
+        box-shadow: 0px 0px 55px 5px rgba(255,116,116,1);
+    }
+}
+
 #time {
     font-size:10em;
     color:#FFF;
@@ -72,13 +95,14 @@ section h2 {}
     color:#EEE;
     font-size:1.2em;
     letter-spacing:1px;
+    margin-top:25px;
 }
 
 #set-alarm {
     margin-top:25px;
 }
 
-#set-alarm input {
+#set-alarm select {
     outline:none !important;
     letter-spacing:2px;
     font-size:1.2em;
@@ -90,6 +114,14 @@ section h2 {}
 #set-alarm button, #stop-timer {
     border-color:#FF7474;
     color:#FF7474;
+    transition:0.2s;
+}
+
+#upcoming-alarm {
+    padding:25px;
+}
+#upcoming-alarm span {
+    font-size:1.3em;
 }
 
 #stopwatch-section {margin-top:25px;}
@@ -109,4 +141,31 @@ stopwatch {}
 #reset-timer{
     border-color:#95989A;
     color:#95989A;
+}
+
+#set-alarm button, #stop-timer,
+#start-timer, #reset-timer {
+    transition:0.2s;
+}
+
+#set-alarm button:hover, #stop-timer:hover {
+    background-color:#FF7474;
+    color:#FFF;
+}
+
+#start-timer:hover {
+    background-color:#51EF82;
+    color:#FFF;
+}
+
+#reset-timer:hover {
+    background-color:#95989A;
+    color:#FFF;
+}
+
+#alarm-sound,
+#alarm-sound audio {
+    height:1px;
+    width:1px;
+    opacity:0.1;
 }

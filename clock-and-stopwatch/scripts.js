@@ -1,11 +1,23 @@
 // ---- Variable Declarations
+// Clock variables
 const time = document.querySelector( "#time" );
 const setAlarmHour = document.querySelector( "#select-hour" );
 const setAlarmMinute = document.querySelector( "#select-minute" );
 const setAlarmTime = document.querySelector( "#submitAlarm" );
+const cancelAlarm = document.querySelector("#cancelAlarm");
 const upcomingAlarm = document.querySelector( "#upcoming-alarm span" );
 const alarmSound = document.querySelector('#alarm-sound audio');
 
+// Stopwatch variables
+const timer = document.querySelector( '#timer' );
+const timerMinutes = document.querySelector( '#timer-minutes' );
+const timerSeconds = document.querySelector( '#timer-seconds' );
+const startTimer = document.querySelector( '#start-timer' );
+const stopTimer = document.querySelector( '#stop-timer' );
+const resetTimer = document.querySelector('#reset-timer');
+
+
+// ------------------------------------------
 // ---- Clock Scripts
 function addZero( i ) {
     if ( i < 10 ) {
@@ -42,7 +54,7 @@ function showDate() {
     let getThisMonth = date.getMonth();
     let month = months[ getThisMonth ];
 
-    let day = date.getDate(); // -- Day of month 1-31
+    let day = date.getDate(); 
 
     let getThisDay = date.getDay();
     let dayOfWeek = days[ getThisDay ];
@@ -89,7 +101,6 @@ function alarmInit(hour, minute) {
         timeContainer.classList.add("alarm-flash");
         clearInterval(int);
         console.log("The alarm is executing...");
-        // alert( "Your alarm for "+ hour + " : " + minute + " has just gone off!." );
         upcomingAlarm.textContent = "";
         setTimeout(function() {
             timeContainer.classList.remove('alarm-flash');
@@ -99,7 +110,6 @@ function alarmInit(hour, minute) {
         console.log("But, it is not yet time to set off your alarm... it is only " 
                                 + alarmDate.getHours() + " : " + alarmDate.getMinutes() + " : " + alarmDate.getSeconds() );
     }
-
 }
 var int;
 function startInterval(h, m) {
@@ -115,6 +125,7 @@ setAlarmTime.addEventListener('click', function() {
     let alarmHour = setAlarmHour.value;
     let alarmMinute = setAlarmMinute.value;
     startInterval( alarmHour, alarmMinute );
+    cancelAlarm.style.display = "inline-block";
 
     alarmHour = addZero( alarmHour );
     alarmMinute = addZero( alarmMinute );
@@ -122,4 +133,44 @@ setAlarmTime.addEventListener('click', function() {
     console.log( upcomingAlarm.textContent );
     setAlarmHour.value = 0;
     setAlarmMinute.value = 0;
+});
+
+cancelAlarm.addEventListener('click', function() {
+    clearInterval(int);
+    upcomingAlarm.textContent = "";
+    cancelAlarm.style.display = "none";   
+});
+
+// --------------------------------------------------------
+// ---- Stopwatch Scripts
+
+var timeInt;
+function stopwatch_interval_start() {
+    window.timeInt = window.setInterval( startCounting, 1000 );
+    console.log( "Counting interval has begun..." );
+}
+
+let totalSeconds = 0;
+function startCounting() {
+    totalSeconds += 1;
+    console.log( "Count: " + totalSeconds );
+    timerSeconds.innerHTML = addZero( totalSeconds%60 );
+    timerMinutes.innerHTML = addZero( parseInt( totalSeconds/60 ) );
+}
+
+startTimer.addEventListener( 'click', function() {
+    stopwatch_interval_start();
+});
+
+stopTimer.addEventListener( 'click', function() {
+    console.log( "Counting interval has been stopped..." );
+    clearInterval( timeInt );
+});
+
+resetTimer.addEventListener( 'click', function() {
+    clearInterval( stopwatch_interval_start );
+    timerSeconds.innerHTML = "00";
+    timerMinutes.innerHTML = "00";
+    totalSeconds = 0;
+    console.log( "The stopwatch has been reset..." );
 });

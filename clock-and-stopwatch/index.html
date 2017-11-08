@@ -19,6 +19,7 @@
                     <select id="select-hour"></select>
                     <select id="select-minute"></select>
                     <button type="submit" id="submitAlarm">SET ALARM</button>
+                    <button id="cancelAlarm">CANCEL ALARM</button>
                 </div>
                 <div id="upcoming-alarm">
                     <span></span>
@@ -28,7 +29,9 @@
             <section id="stopwatch-section">
                     <h2>Stopwatch</h2>
                     <div id="stopwatch">
-                        <span id="timer">00:00</span>
+                        <span id="timer">
+                            <span id="timer-minutes">00</span> : <span id="timer-seconds">00</span>
+                        </span>
                     </div>
                     <div id="stopwatch-controls">
                         <button id="start-timer">START</button>

@@ -2,11 +2,53 @@
 <html>
     <head>
         <title>String Analyzer</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato|Lustria" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <!-- Build String Anylzer -->
+        <h1>String Analyzer.</h1>
+        <div id="wrapper">
+            <div id="string-input">
+                <textarea id="input" placeholder="Enter your string here..."></textarea>
+                <button id="init">Analyze!</button>
+            </div>
 
+            <div id="utilities">
+                <button id="reverse-button">Reverse</button>
+                <button id="uppercase-button">All Uppercase</button>
+                <button id="capitalize-button">Capitalize</button>
+                <button id="dropcap-button">Drop-cap</button>
+                <button id="lowercase-button">All Lowercase</button>
+            </div>
+
+            <div id="table-container">
+                <table id="stats-table">
+                    <tr>
+                        <th>Stat</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td># of Characters</td>
+                        <td id="num-of-chars">123435</td>
+                    </tr> 
+                    <tr>
+                        <td># of Letters</td>
+                        <td id="num-of-letters">364</td>
+                    </tr>   
+                    <tr>
+                        <td># of Vowels</td>
+                        <td id="num-of-vowels">2357</td>
+                    </tr>
+                    <tr>
+                        <td># of Numbers</td>
+                        <td id="num-of-numbers">145</td>
+                    </tr>       
+                </table>
+
+            </div>
+
+        </div>
         <script src="scripts.js"></script>
     </body>
 </html>

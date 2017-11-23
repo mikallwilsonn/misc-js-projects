@@ -24,8 +24,12 @@ Click the button to get a flipping animation that lands on either 'heads' or 'ta
 
 ### String Analyzer
 String Analyzer provides a textbox to input any strings into. Once the 'Analyze!' button is pressed, you then get a set of stats about the string, such as: # of total characters, # of letters, # of numbers, # of vowels, and # of puncation characters. Once analyzed, you are then provided with buttons to either reverse the string, randomize the characters in the string, make it all uppercase or lowercase, and/or capitalize each word.  
-[View String Analyzer on CodePen](https://codepen.io/mikallwilsonn/pen/xPYyQq)
+[View String Analyzer on CodePen](https://codepen.io/mikallwilsonn/pen/xPYyQq)  
   
+
+### Simple Weather App
+This is just a simple app that asks for a users permission to retrieve geolocation data and then applies the coordinates to an API call through [OpenWeatherMap](https://openweathermap.org). The app then provides your location, the time the weather was checked, the temperature (in celcius), wind speeds, cloud coverage, as well as if there has been any rain or snow in the past 3 hours. 
+[View Simple Weather App on CodePen](https://codepen.io/mikallwilsonn/pen/GOGqjx)
 
 
 ## Upcoming Additions

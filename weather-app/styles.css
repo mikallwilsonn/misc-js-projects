@@ -115,7 +115,8 @@ h1 {
 
 #wind, 
 #cloud-coverage, 
-#sun-times { 
+#rainfall,
+#snowfall { 
     font-size:1.25em; 
     margin-top:10px;
 }

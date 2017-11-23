@@ -34,8 +34,6 @@ function getLocation() {
     function success( position ) {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
-        console.log( 'Latitude is: ' + latitude );
-        console.log( 'Longitude is: ' + longitude );
     }
 
     function error() {
@@ -57,7 +55,6 @@ function getWeather() {
         if ( latitude !== undefined && longitude !== undefined ) {
             clearInterval( checkCoords );
             API_URL = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&units=metric&appid=' + key;
-            console.log( 'You are making an API request to ' + API_URL );
             xhr = new XMLHttpRequest(); 
             xhr.open( "GET", API_URL );
             xhr.responseType = 'json';
@@ -94,17 +91,15 @@ function showWeather() {
     cloudCoverage.textContent = data.clouds.all + "% cloud coverage currently.";
 
     if ( data.rain !== undefined ) {
-        rainfall.style.opacity = "1";
-        rainfall.textContent = "There has been " +  data.rain + " rain in the last 3 hours.";
+        rainfall.textContent = "There has been " +  data.rain + "mm rain in the last 3 hours.";
     } else {
-        rainfall.style.opacity = "0";
+        rainfall.textContent = "There has not been rain recorded in the past 3 hours.";
     }
 
     if ( data.snow !== undefined ) {
-        snowfall.style.opacity = "1";
-        snowfalll.textContent = "There has been " +  data.snow + " snow in the last 3 hours.";
+        snowfalll.textContent = "There has been " +  data.snow + "mm of snow in the last 3 hours.";
     } else {
-        snowfall.style.opacity = "0";
+        snowfall.textContent = "There has not been any snow recorded in the past 3 hours.";
     }
 
 }

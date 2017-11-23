@@ -5,3 +5,122 @@ font-family: 'Barlow', sans-serif;
 font-weight:300;
 font-weight:400;
 */
+
+html {
+    background: rgba(147,206,222,1);
+    background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+}
+
+body {}
+
+h1 {
+    font-family: 'Lemon', cursive;
+    font-size:5em;
+    color:#FAEB8C;
+    text-align:center;
+    margin-bottom:100px;
+}
+
+#wrapper {
+    width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+#wrapper > * {
+    font-family: 'Barlow', sans-serif;
+}
+
+#find-location {
+    font-size:1.2em;
+    letter-spacing:1px;
+    padding:25px 50px;
+    background-color:#F00A6D;
+    color:#FFF;
+    border:none;
+    font-weight:400;
+    text-transform:uppercase;
+    outline:none;
+    transition:.3s;
+}
+#find-location:hover {
+    cursor:pointer;
+    transform:translateY(-10px);
+    box-shadow:0 5px 10px -5px rgba(0,0,0,0.5);
+}
+
+#loader {
+    width:100px;
+    height:100px;
+    background:url(spinner.svg) no-repeat;
+    background-position:center center;
+    margin:auto;
+    animation-name: loading;
+    animation-duration:1s;
+    animation-iteration-count:infinite;
+    transition:1s;
+    display:none;
+}
+@keyframes loading {
+    0% {
+        transform:rotate(180deg);
+        opacity:0.25;
+        background-size:50%;
+    }
+    50% {
+        background-size:75%;
+        opacity:0.5;
+    }
+    100% {
+        transform:rotate(360deg);
+        opacity:1;
+        background-size:100%;
+    }
+}
+
+#output {
+    font-size:1.5em;
+    color:#FAEB8C;
+}
+
+
+#weather-container {
+    width:100%;
+    padding:50px 10px;
+}
+
+#weather {
+    display:none;
+}
+
+
+#city-name {
+    font-size:2em;
+    margin-top:25px;
+}
+#time-checked {
+    font-size:1.5em;
+    color:rgba(255,255,255,0.5);
+    letter-spacing:1px;
+}
+
+#temperature-container {
+    font-size:10em;
+    color:#FFF;
+}
+#temp-deg {
+    opacity:0.5;
+}
+#temperature {}
+
+#wind, 
+#cloud-coverage, 
+#sun-times { 
+    font-size:1.25em; 
+    margin-top:10px;
+}
+
+#wind {}
+#cloud-coverage {}
+#rainfall {}
+#snowfall {}

@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Weather App</title>
+        <title>Simple Weather App</title>
         <link href="https://fonts.googleapis.com/css?family=Barlow:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lemon" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <script src="scripts.js" defer></script>
+        
     </head>
     <body>
-        <!-- Weather App Code here -->
-        <p><button id="find-location">Show my location</button></p>
-        <div id="out"></div>
+        <h1>Simple Weather App!</h1>
+        <div id="wrapper">
+            
+            <!-- Weather App Code here -->
+            <button id="find-location">Show me the weather</button>
+            
+            <div id="weather-container">
+                <div id="loader"></div>
+                <p id="output"></p>
+
+                <div id="weather">
+                    <h2 id="city-name"></h2>
+                    <div id="time-checked"></div>
+                    <div id="temperature-container"><span id="temperature"></span><span id="temp-deg">&deg;<sup>c</sup></span></div>
+                    <div id="wind"></div>
+                    <div id="cloud-coverage"></div>
+                    <div id="rainfall"></div>
+                    <div id="snowfall"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <script src="scripts.js" defer></script>
     </body>
 </html>

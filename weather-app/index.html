@@ -15,21 +15,44 @@
             <button id="find-location">Show me the weather</button>
             
             <div id="weather-container">
+
                 <div id="loader"></div>
                 <p id="output"></p>
 
                 <div id="weather">
-                    <h2 id="city-name"></h2>
-                    <div id="time-checked"></div>
-                    <div id="temperature-container"><span id="temperature"></span><span id="temp-deg">&deg;<sup>c</sup></span></div>
-                    <div id="wind"></div>
-                    <div id="cloud-coverage"></div>
-                    <div id="rainfall"></div>
-                    <div id="snowfall"></div>
+                    <div id="weather-overlay">
+
+                        <h2 id="city-name"></h2>
+                        <div id="time-checked"></div>
+
+                        <div id="temperature-container"><span id="temperature"></span><span id="temp-deg">&deg;<sup>c</sup></span></div>
+
+                        <div id="widget-quadrants">
+                            <div class="quadrant">
+                                    <div id="wind-icon" class="icon"><img src="icons/wind.svg" height="75px" width="75px"></div>
+                                    <div id="wind" class="data"></div>
+                            </div>
+
+                            <div class="quadrant">
+                                    <div id="cloud-icon" class="icon"><img src="icons/cloud.svg" height="75px" width="75px"></div>
+                                <div id="cloud-coverage" class="data"></div>
+                            </div>
+
+                            <div class="quadrant">
+                                    <div id="rain-icon" class="icon"><img src="icons/rain.svg" height="75px" width="75px"></div>
+                                <div id="rainfall" class="data"></div>
+                            </div>
+
+                            <div class="quadrant">
+                                    <div id="snow-icon" class="icon"><img src="icons/snow.svg" height="75px" width="75px"></div>
+                                <div id="snowfall" class="data"></div>
+                            </div>
+
+                        </div>
                 </div>
 
             </div>
-
+            </div>
         </div>
         <script src="scripts.js" defer></script>
     </body>

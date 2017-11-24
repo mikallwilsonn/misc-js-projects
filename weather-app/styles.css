@@ -83,7 +83,6 @@ h1 {
     color:#FAEB8C;
 }
 
-
 #weather-container {
     width:100%;
     padding:50px 10px;
@@ -93,14 +92,27 @@ h1 {
     display:none;
 }
 
+#weather-overlay {
+    background-color:rgba(147,206,222,0.5);
+    border:1px solid #FFF;
+    padding:50px 5px;
+    border-radius:10px;   
+}
+
+.data {
+    margin-top:25px;
+    padding:10px;
+    box-sizing:border-box;
+}
 
 #city-name {
-    font-size:2em;
+    font-size:2.5em;
     margin-top:25px;
+    opacity:0.75;
 }
 #time-checked {
     font-size:1.5em;
-    color:rgba(255,255,255,0.5);
+    color:rgba(0,0,0,0.5);
     letter-spacing:1px;
 }
 
@@ -125,3 +137,34 @@ h1 {
 #cloud-coverage {}
 #rainfall {}
 #snowfall {}
+
+#widget-quadrants {
+    width:100%;
+    margin-top:25px;
+}
+
+.quadrant {
+    display:inline-block;
+    width:40%;
+    background-color:rgba(255,255,255,0.25);
+    padding:25px 10px;
+    margin-top:10px;
+    border-radius:5px;
+    box-shadow:0px 0px 3px 2px rgba(0,0,0,0.025);
+}
+
+.icon {
+    width:75px;
+    height:75px;
+    margin:auto;
+    margin-bottom:10px;
+}
+
+.icon img {
+    opacity:0.65;
+}
+
+#wind-icon {}
+#cloud-icon {}
+#rain-icon {}
+#snow-icon {}

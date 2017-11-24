@@ -1,0 +1,97 @@
+html {
+    background: url(concrete_wall.png) repeat;
+  }
+
+  body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex: 1;
+    flex-direction:column;
+    align-items: veritcal;
+    justify-content: center;
+  }
+
+  h1 {
+    font-family: 'Righteous', cursive;
+    margin:auto;
+    margin-top:100px;
+    color:rgba(7,213,179,1);
+    font-size:10em;
+    text-shadow:0px 0px 10px rgba(0,0,0,0.75);
+  }
+
+  h2 {
+      color:rgba(255,64,76,1);
+      font-size:1.75em;
+      margin:auto;
+      margin-top:30px;
+      letter-spacing:1px;
+      font-weight:normal;
+  }
+
+  h3 {
+      margin:auto;
+      margin-top:25px;
+      text-align:center;
+      font-weight:normal;
+      color:rgba(255,255,255,0.5);
+  }
+
+  #drumpad-container {
+      width:50%;
+      margin:auto;
+      margin-top:75px;
+      padding:50px;
+      background-color:rgba(100,100,100,0.25);
+      background:url(squared_metal.png) repeat;
+      border:5px solid rgba(100,100,100,0.25);
+      border-bottom-width:10px;
+      border-radius:10px;
+      box-shadow:0px 0px 10px 5px rgba(0,0,0,0.1);
+  }
+
+  .keys {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+  }
+  
+  .key {
+    border: 3px solid rgba(0,0,0,0.75);
+    border-bottom-width:5px;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 160px;
+    text-align: center;
+    color: white;
+    background: rgba(75,75,75,0.75);
+    text-shadow: 0 0 .5rem black;
+  }
+  
+  .playing {
+    transform: scale(1.25);
+    border-color: rgba(7,213,179,1);
+    box-shadow: 0 0 1rem rgba(7,213,179,0.75);
+    background-color:rgba(7,213,179,1);
+  }
+  
+  kbd {
+    display: block;
+    font-size: 4rem;
+    font-family: 'Righteous', cursive;
+  }
+  
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: rgba(7,213,179,1);
+  }
+  

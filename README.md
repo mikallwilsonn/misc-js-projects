@@ -29,7 +29,11 @@ String Analyzer provides a textbox to input any strings into. Once the 'Analyze!
 
 ### Simple Weather App
 This is just a simple app that asks for a users permission to retrieve geolocation data and then applies the coordinates to an API call through [OpenWeatherMap](https://openweathermap.org). The app then provides your location, the time the weather was checked, the temperature (in celcius), wind speeds, cloud coverage, as well as if there has been any rain or snow in the past 3 hours. 
-[View Simple Weather App on CodePen](https://codepen.io/mikallwilsonn/pen/GOGqjx)
+[View Simple Weather App on CodePen](https://codepen.io/mikallwilsonn/pen/GOGqjx)  
+  
+    
+### Keyboard Drumpad
+Keyboard Drumpad is an app that waits for keyboard input and will play a different sound depending on which key is pressed. Layout is setup similar to a real-life drumpad/drum machine.
 
 
 ## Upcoming Additions

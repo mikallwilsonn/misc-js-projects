@@ -14,13 +14,13 @@ const rainfall = document.querySelector( "#rainfall" );
 const snowfall = document.querySelector( "#snowfall" );
 const weatherWidget = document.querySelector( "#weather" );
 
-
 let latitude;
 let longitude;
 let API_URL;
 let data;
 let output;
 let xhr;
+
 
 // ---- Acquiring User Location
 function getLocation() {
@@ -81,11 +81,22 @@ function showWeather() {
     loader.style.display = "none";
     weatherWidget.style.display ="block";
     cityName.textContent = data.name + ", " + data.sys.country;
+
+    function addZero( i ) {
+        if ( i < 10 ) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
     let dateTime = new Date();
     let timeHour = dateTime.getHours();
     let timeMinutes = dateTime.getMinutes();
     let timeSeconds = dateTime.getSeconds();
-    timeChecked.textContent = timeHour + " :" + timeMinutes + " : " + timeSeconds;
+    timeHour = addZero( timeHour );
+    timeMinutes = addZero( timeMinutes );
+    timeSeconds = addZero( timeSeconds );
+    timeChecked.textContent = timeHour + " : " + timeMinutes + " : " + timeSeconds;
     temperature.textContent = data.main.temp;
     windSpeed.textContent = "Wind speeds: " + data.wind.speed  + " m/sec. ";
     cloudCoverage.textContent = data.clouds.all + "% cloud coverage currently.";

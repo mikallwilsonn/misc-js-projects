@@ -30,10 +30,18 @@ String Analyzer provides a textbox to input any strings into. Once the 'Analyze!
 ### Simple Weather App
 This is just a simple app that asks for a users permission to retrieve geolocation data and then applies the coordinates to an API call through [OpenWeatherMap](https://openweathermap.org). The app then provides your location, the time the weather was checked, the temperature (in celcius), wind speeds, cloud coverage, as well as if there has been any rain or snow in the past 3 hours. 
 [View Simple Weather App on CodePen](https://codepen.io/mikallwilsonn/pen/GOGqjx)  
+**CodePen link may not retrieve weather data due to how iframes (which is used for the text editors) handle XMLHttpRequests**  
   
     
 ### Keyboard Drumpad
 Keyboard Drumpad is an app that waits for keyboard input and will play a different sound depending on which key is pressed. Layout is setup similar to a real-life drumpad/drum machine.
+##### No CodePen link for this one due to the sound files required for use.  
+    
+      
+### Analog Clock
+Simple analog clock app with rotating second, minute, and hour hands. As well as a 'clock tick' sound that plays each second that can be toggled on or off.  
+[View Analog Clock on CodePen](https://codepen.io/mikallwilsonn/pen/ZaRPNW)  
+  
 
 
 ## Upcoming Additions

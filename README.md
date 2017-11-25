@@ -42,7 +42,11 @@ Keyboard Drumpad is an app that waits for keyboard input and will play a differe
 Simple analog clock app with rotating second, minute, and hour hands. As well as a 'clock tick' sound that plays each second that can be toggled on or off.  
 [View Analog Clock on CodePen](https://codepen.io/mikallwilsonn/pen/ZaRPNW)  
   
-
+    
+### Photo Fun
+Photo Fun is an app that gives you controls to play around with different CSS filter settings.  
+[View Photo Fun on CodePen](https://codepen.io/mikallwilsonn/pen/rYrWad)  
+  
 
 ## Upcoming Additions
 **More projects to be added over time...**

@@ -35,9 +35,9 @@ This is just a simple app that asks for a users permission to retrieve geolocati
     
 ### Keyboard Drumpad
 Keyboard Drumpad is an app that waits for keyboard input and will play a different sound depending on which key is pressed. Layout is setup similar to a real-life drumpad/drum machine.
-##### No CodePen link for this one due to the sound files required for use.  
+**No CodePen link for this one due to the sound files required for use.**  
+  
     
-      
 ### Analog Clock
 Simple analog clock app with rotating second, minute, and hour hands. As well as a 'clock tick' sound that plays each second that can be toggled on or off.  
 [View Analog Clock on CodePen](https://codepen.io/mikallwilsonn/pen/ZaRPNW)  

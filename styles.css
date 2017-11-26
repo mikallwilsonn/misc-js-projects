@@ -1,0 +1,108 @@
+/* -------- Project Feature styles -------- */
+/*
+Font styles:
+body:
+font-family: 'Raleway', sans-serif;
+font-weight:300;
+
+heading:
+font-family: 'Cabin', sans-serif;
+font-weight:600;
+
+*/
+
+body {
+    background: rgba(0,13,189,1);
+    background: linear-gradient(135deg, rgba(0,13,189,1) 0%, rgba(0,3,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000dbd', endColorstr='#000336', GradientType=1 );
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+    padding:50px 25px;
+}
+
+img#mw-logo {
+    width:100px;
+    height:100px;
+    margin:auto;
+    text-align:center;
+}
+
+h2 {
+    color:#FFF;
+    font-weight:400;
+    width:45%;
+    margin:auto;
+    margin-top:25px;
+    line-height:1.5em;
+}
+
+#wrapper {
+    width:50%;
+    margin:auto;
+    margin-top:50px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.project {
+    flex-basis:25%;
+    border:2px solid rgba(255,255,255,0.25);
+    transition:0.3s;
+    padding:50px 25px;
+    margin:10px;
+    border-radius:10px;
+}
+
+.project:hover {
+    border:2px solid rgba(255,255,255,1);
+    background-color:rgba(255,255,255,0.1);
+    transform:scale(1.25);
+}
+
+.project-icon {}
+.project-title {
+    color:#FFF;
+    font-weight:400;
+    font-size:1.75em;
+}
+.project-link {
+    font-family: 'Cabin', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#FFF;
+    font-weight:600;
+    padding:10px 20px;
+    margin-top:25px;
+    border:2px solid #FFF;
+    border-radius:5px;
+    text-decoration:none;
+    opacity:0.75;
+    transition:0.3s;
+}
+
+.project-link:hover {
+    opacity:1;
+    color:#003366;
+    background:rgba(255,255,255,1);
+}
+
+/* -- Media Queries -- */
+@media screen and (max-width:2000px) {
+    #wrapper { width:75%; }
+}
+
+@media screen and (max-width:1500px) {
+    #wrapper { width:100%; }
+    h2 { width:75%; }
+}
+
+@media screen and (max-width:1000px) {
+    .project { flex-basis:35%; }
+}
+
+@media screen and (max-width:750px) {
+    .project { flex-basis:75%; }
+    h2 { width:90%; }
+}

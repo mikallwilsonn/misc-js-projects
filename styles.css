@@ -25,6 +25,7 @@ img#mw-logo {
     height:100px;
     margin:auto;
     text-align:center;
+    user-select:none;
 }
 
 h2 {
@@ -60,6 +61,8 @@ h2 {
     background-color:rgba(255,255,255,0.1);
     transform:scale(1.25);
 }
+
+.project-link, .project-title { user-select: none; }
 
 .project-icon {}
 .project-title {

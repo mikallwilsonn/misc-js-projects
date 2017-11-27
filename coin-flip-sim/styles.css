@@ -153,3 +153,9 @@ h1 {
     background-color:rgba(68,67,73,1);
     border-color:rgba(68,67,73,0.5);
 }
+
+/* -- Media Queries -- */
+@media screen and (max-width:1200px) {
+    body { padding-bottom:50px; }
+    #reset-stats { font-size:2.5em; padding: 25px 50px; }
+}

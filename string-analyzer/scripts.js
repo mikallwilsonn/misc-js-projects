@@ -14,6 +14,7 @@ const capitalizeString = document.querySelector( "#capitalize-button" );
 const lowercaseString = document.querySelector( "#lowercase-button" );
 const restoreString = document.querySelector( "#restore-button" );
 
+const tableContainer = document.querySelector( "#table-container" );
 const statCharacters = document.querySelector( "#num-of-chars" );
 const statLetters = document.querySelector( "#num-of-letters" );
 const statVowels = document.querySelector( "#num-of-vowels" );
@@ -27,13 +28,13 @@ let stringInitialValue;
 analyze.addEventListener('click', function() {
     if ( theString.value === "" ) {
         alert( "You need to enter the string before you can analyze it!" );
-        utilities.style.display= "none";
+        utilities.style.opacity = "0";
         clear.style.display = "none";
     } else {
         stringInitialValue = theString.value;
         str = theString.value.toLowerCase();
         str = str.replace(/\s/g, "");
-        utilities.style.display= "block";
+        utilities.style.opacity = "1";
         clear.style.display = "inline-block";
 
         let chars = str.length;
@@ -43,11 +44,14 @@ analyze.addEventListener('click', function() {
         vowelsCount();
         numbersCount();
         puncCount();
+        tableContainer.style.opacity = "1";
     }
+    
 });
 
 function lettersCount() {
-    let letters = str.replace(/\w/g, "");
+    let letters = str.replace(/[^ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz]/gi, "");
+    /* --  Note: ^^^ Does not seem to work unless ULTRA exlicit in what to replace... */
     letters = letters.length;
     statLetters.textContent = letters;
 };
@@ -73,7 +77,7 @@ function puncCount() {
 // ---- Clearing the textarea
 clear.addEventListener('click', function() {
     theString.value = "";
-    utilities.style.display= "none";
+    utilities.style.opacity = "0";
     clear.style.display = "none";
     removeClasses();
     statCharacters.textContent = "";
@@ -81,6 +85,7 @@ clear.addEventListener('click', function() {
     statVowels.textContent = "";
     statNumbers.textContent = "";
     statPuncuation.textContent = "";
+    tableContainer.style.opacity = "0";
 });
 
 // ---- Utility buttons to apply styles to string.
@@ -142,4 +147,5 @@ restoreString.addEventListener('click', function() {
     theString.value = stringInitialValue;
     removeClasses();
     restoreString.style.display = "none";
+    
 });

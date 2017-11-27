@@ -28,7 +28,7 @@ clearLast.addEventListener('click', function() {
     var str = display.textContent;
     str = str.substring(0, str.length -1);
     display.textContent = str;
-    console.log('You cleared the last numer or operator entered.');
+    console.log('You cleared the last number or operator entered.');
     if ( display.textContent === "" ) {
         display.innerHTML = blinker;
     }

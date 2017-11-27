@@ -7,7 +7,6 @@ links.forEach( link => {
     
     link.addEventListener('click', function( e ) {
         e.preventDefault();
-        console.log( 'You are being taken to ' + dest );
         window.open( dest, 'newwindow', 'width=1500, height=1000' );
         return false;
     })

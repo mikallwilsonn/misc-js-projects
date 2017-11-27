@@ -92,3 +92,12 @@ div#pi-display {
 }
 
 #pi-display p  { font-size:2em; }
+
+@media screen and (max-width:1500px) {
+    div#container { width:75%; }
+}
+
+@media screen and (max-width:1000px) {
+    div#container { width:90%; padding: 50px 25px; }
+    div#input { width:80%; }
+}

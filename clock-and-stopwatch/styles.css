@@ -1,21 +1,30 @@
+/* -------- Clock & Stopwatch Styles ------- */
 
-body,  { 
-    font-weight:400;
-}
-#wrapper {
-    width:80%;
-    margin:auto;
-}
-
-button:hover {
-    cursor:pointer !important;
+body  { 
+    font-weight:400; 
+    background: rgba(99,99,99,1);
+    min-height:100vh;
+    background: linear-gradient(45deg, rgba(99,99,99,1) 0%, rgba(45,45,45,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#636363', endColorstr='#2d2d2d', GradientType=1 );
 }
 
 h1 {
     font-weight:800;
     text-align:center;
     font-size:5em;
+    color:#FFF;
 }
+
+#wrapper {
+    width:80%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+button:hover { cursor:pointer !important; }
+
 
 h1,
 section h2,
@@ -46,28 +55,30 @@ section h2,
 }
 
 section{
-    display:block;
-    width:50%;
-    margin:auto;
+    flex-basis:30%;
     text-align:center;
-    background-color:rgba(250,250,250,0.5);
-    border:2px solid rgba(30,30,30,1);
-    border-radius:5px;
-    padding:50px 25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    
 }
 
-section h2 {}
-#clock-section {}
+section .inner-container {
+    background-color:#FFF;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+section h2 { color:#FFF; font-weight:normal; }
 
 #clock {
-    background-color:rgba(100,100,100,1);
-    padding:25px;
-    border-radius:5px;
-    width:75%;
-    margin:auto;
-    border:2px solid rgba(25,25,25,0.5);
-    border-bottom-width:4px;
-    box-shadow:0px 0px 5px 3px rgba(0,0,0,0.25);
+    background: rgba(225,193,232,1);
+    background: linear-gradient(45deg, rgba(225,193,232,1) 0%, rgba(199,135,213,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1c1e8', endColorstr='#c787d5', GradientType=1 );
+    padding:100px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
 }
 
 .alarm-flash {
@@ -93,27 +104,24 @@ section h2 {}
 }
 
 #time {
-    font-size:8rem;
+    font-size:5em;
     color:#FFF;
-    text-shadow:0px 2px 5px rgba(0,0,0,0.5);
 }
 #date {
-    background-color:rgba(50,50,50,1);
-    margin:auto;
-    padding:15px 50px;
-    display:inline-block;
-    border-radius:5px;
-    border:1px solid rgba(255,255,255,0.5);
-    border-bottom-width:3px;
-    box-shadow:0px 0px 5px 1px rgba(0,0,0,0.1);
     color:#EEE;
     font-size:1.2em;
     letter-spacing:1px;
     margin-top:25px;
+    text-shadow:0px 1px 2px rgba(0,0,0,0.25);
 }
 
-#set-alarm {
-    margin-top:25px;
+#set-alarm { 
+    margin-top:25px; 
+    padding:25px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap:wrap;
 }
 
 #set-alarm select {
@@ -123,45 +131,45 @@ section h2 {}
     padding:10px 20px;
     border-radius:5px;
     border-width:3px;
+    flex-basis:30%;
+}
+
+#set-alarm button {
+    flex-basis:45%;
+    margin-top:25px;
 }
 
 #submitAlarm, #stop-timer {
     border-color:#FF7474;
     color:#FF7474;
     transition:0.2s;
+    flex-basis:45%;
 }
 
-#cancelAlarm {
-    display:none;
-}
+#cancelAlarm { display:none; }
 
-#upcoming-alarm {
-    padding:25px;
-}
-#upcoming-alarm span {
-    font-size:1.3em;
-}
+#upcoming-alarm {  padding:25px; }
+#upcoming-alarm span { font-size:1.3em; }
 
-#stopwatch-section {margin-top:25px;}
 #stopwatch {
+    background: rgba(164,191,235,1);
+    background: linear-gradient(135deg, rgba(164,191,235,1) 0%, rgba(106,142,204,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4bfeb', endColorstr='#6a8ecc', GradientType=1 );
     box-sizing:border-box;
-    border: 3px solid rgba(100,100,100,1);
-    border-bottom-width:8px;
-    border-radius:100%;
     margin:auto;
-    padding:75px 50px;
-    display:inline-block;
+    padding:100px 50px;
     text-align:center;
-    
 }
 
 #timer { 
     font-size:5em;
     margin:auto;
+    color:#FFF;
  }
 
-#stopwatch-controls {
-    margin-top:25px;
+#stopwatch-controls { 
+    margin-top:25px; 
+    padding:50px;
 }
 
 #start-timer {
@@ -199,4 +207,23 @@ section h2 {}
     height:1px;
     width:1px;
     opacity:0.1;
+}
+
+#stopwatch-controls {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+#stopwatch-controls button {
+    margin-top:10px;
+}
+
+#start-timer, #stop-timer {
+    flex-basis:45%;
+}
+
+#reset-timer {
+    flex-basis:100%;
 }

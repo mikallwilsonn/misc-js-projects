@@ -29,9 +29,7 @@ body {
     padding-bottom:100px;
 }
 
-#texture-settings label {
-    font-size:25px;
-}
+#texture-settings label { font-size:25px; }
 
 #see-original {
     padding:10px 25px;
@@ -40,6 +38,10 @@ body {
     transition:0.3s;
     margin-top:25px;
     outline:none;
+}
+
+#see-original:hover {
+    cursor:pointer;
 }
 
 .so-light {
@@ -78,6 +80,10 @@ img {
     height:auto;
 }
 
+#img-container {
+    width:100%;
+}
+
 .styled {
     padding: var(--spacing);
     background: var(--base);
@@ -97,7 +103,9 @@ img {
     padding: 10px;
     background: #FF404C;
     border-radius: 0px;
-    filter:unset;   
+    filter:unset;
+    transition:0.1s;
+    transition-timing-function: ease-in;   
 }
 
 h2 span#title {
@@ -110,15 +118,19 @@ h2 span#title-2 {
     font-weight:100 !important;
 }
 
-h2 {
-    margin-bottom:0px;
+h2 { margin-bottom:0px; }
+input { width:100px; }
+#img-container {margin-top:75px; }
+
+/* ---- Media Queries ----*/
+@media screen and ( max-width:2000px ) {
+    img { width:50%; max-width: none; }
 }
 
-
-input {
-    width:100px;
+@media screen and ( max-width:1300px ) {
+    img { width:75%; }
 }
 
-#img-container {
-    margin-top:75px;
+@media screen and ( max-width:1050px ) {
+    img { width:80%; }
 }

@@ -22,7 +22,7 @@ h1 {
 }
 
 #calculator {
-    background:url('redox_01.png') repeat;
+    background-color:#FFF;
     box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.5);
     border-radius:10px;
     display:flex;

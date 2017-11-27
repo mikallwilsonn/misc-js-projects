@@ -34,7 +34,7 @@ function showTime() {
     hour = addZero( hour )
     minute = addZero( minute );
     second = addZero( second );
-    document.getElementById( 'time' ).textContent = hour + ":" + minute + ":" + second;
+    document.getElementById( 'time' ).textContent = hour + " : " + minute + " : " + second;
     t = setTimeout(function() {
         showTime();
     }, 500);
@@ -153,7 +153,6 @@ function stopwatch_interval_start() {
 let totalSeconds = 0;
 function startCounting() {
     totalSeconds += 1;
-    console.log( "Count: " + totalSeconds );
     timerSeconds.innerHTML = addZero( totalSeconds%60 );
     timerMinutes.innerHTML = addZero( parseInt( totalSeconds/60 ) );
 }

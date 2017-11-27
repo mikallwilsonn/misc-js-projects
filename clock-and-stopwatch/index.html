@@ -2,41 +2,46 @@
 <html>
     <head>
         <title>Clock &amp; Stopwatch</title>
+        <link rel="shortcut icon" href="../project-feature-assets/favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
         <link type="text/css" href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <div id ="wrapper">
-            <h1>Clock &amp; Stopwatch</h1>
+        <h1>Clock &amp; Stopwatch</h1>
+        <div id ="wrapper">        
             <section id="clock-section">
-                <h2>Current Time</h2>
-                <div id="clock" class="">
-                    <span id="time"></span>
-                    <span id="date"></span>
-                </div>
-                <div id="set-alarm">
-                    <select id="select-hour"></select>
-                    <select id="select-minute"></select>
-                    <button type="submit" id="submitAlarm">SET ALARM</button>
-                    <button id="cancelAlarm">CANCEL ALARM</button>
-                </div>
-                <div id="upcoming-alarm">
-                    <span></span>
+                <h2>The Current Time</h2>
+                <div class="inner-container">
+                    <div id="clock" class="">
+                        <span id="time"></span>
+                        <span id="date"></span>
+                    </div>
+                    <div id="set-alarm">
+                        <select id="select-hour"></select>
+                        <select id="select-minute"></select>
+                        <button type="submit" id="submitAlarm">SET ALARM</button>
+                        <button id="cancelAlarm">CANCEL ALARM</button>
+                    </div>
+                    <div id="upcoming-alarm">
+                        <span></span>
+                    </div>
                 </div>
             </section>
 
             <section id="stopwatch-section">
                     <h2>Stopwatch</h2>
-                    <div id="stopwatch">
-                        <span id="timer">
-                            <span id="timer-minutes">00</span> : <span id="timer-seconds">00</span>
-                        </span>
-                    </div>
-                    <div id="stopwatch-controls">
-                        <button id="start-timer">START</button>
-                        <button id="stop-timer">STOP</button>
-                        <button id="reset-timer">RESET</button>
+                    <div class="inner-container">
+                        <div id="stopwatch">
+                            <span id="timer">
+                                <span id="timer-minutes">00</span> : <span id="timer-seconds">00</span>
+                            </span>
+                        </div>
+                        <div id="stopwatch-controls">
+                            <button id="start-timer">START</button>
+                            <button id="stop-timer">STOP</button>
+                            <button id="reset-timer">RESET</button>
+                        </div>
                     </div>
             </section>
         </div>

@@ -1,0 +1,285 @@
+/* -------- Custom Media ------- */
+
+body {
+    background: #485563;  
+    background: -webkit-linear-gradient(to right, #29323c, #485563);  
+    background: linear-gradient(to right, #29323c, #485563); 
+    background-size:cover;
+    text-align:center;
+}
+
+h1 {
+    text-align:center;
+    color:#FFF;
+    font-size:6em;
+    font-family: 'Trade Winds', cursive;
+    text-shadow:0px 5px 5px rgba(0,0,0,0.5);
+}
+
+#wrapper {
+    width:80%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.player {
+    /* -- Video in 16:9 ratio. To get your width, multiply desired height by 1.777778 -- */
+    margin:auto;
+    width:764px;
+    height:430px;
+    border:5px solid rgba(0,0,0,0.2);
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    transition:0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+/* This css is only applied when fullscreen is active. */
+.player:fullscreen {
+    max-width: none;
+    width: 100%;
+}
+
+.player:-webkit-full-screen {
+    max-width: none;
+    width: 100%;
+}
+
+.player__video {
+    width: 100%;
+}
+
+.player__button {
+    background:none;
+    border:0;
+    line-height:1;
+    color:white;
+    text-align: center;
+    outline:0;
+    padding: 0;
+    cursor:pointer;
+    max-width:50px;
+    font-size:12px;
+    opacity:0.75;
+    transition:0.3s;
+}
+
+.player__button:hover {
+    transform:scale(1.1);
+    opacity:1;
+}
+
+.player__slider {
+    width:10px;
+    height:30px;
+}
+
+.player__controls {
+    width: 100%;
+    display:flex;
+    position: absolute;
+    height:50px;
+    padding-bottom:2px;
+    bottom:0;
+    transform: translateY(100%) translateY(-5px); 
+    transition:all .3s;
+    flex-wrap:wrap;
+    background:rgba(0,0,0,0.25);
+}
+
+.player:hover .player__controls {
+    transform: translateY(0);
+}
+
+.player:hover .progress {
+    height:8px;
+}
+
+.player__controls > *{
+    flex:1;
+}
+
+.progress {
+    flex:1;
+    position: relative;
+    display:flex;
+    flex-basis:100%;
+    height:3px;
+    transition:height 0.3s;
+    background:rgba(0,0,0,0.5);
+    cursor:ew-resize;
+}
+
+.progress__filled {
+    background: #C02425; 
+    background: -webkit-linear-gradient(to right, #F0CB35, #C02425);
+    background: linear-gradient(to right, #F0CB35, #C02425);
+    border-radius:0 50px 50px 0;
+    flex:0;
+    flex-basis:0%;
+}
+
+/* unholy css to style input type="range" */
+
+input[type=range] {
+    -webkit-appearance: none;
+    background:transparent;
+    width: 80px;
+    margin: 0 5px;
+    transform: rotate(-90deg);
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 25%;
+    height: 15px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    border-radius: 50px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+input[name=volume]::-webkit-slider-runnable-track {
+    background: rgba(0,151,245,1);
+    background: linear-gradient(to right, rgba(0,151,245,1) 0%, rgba(0,151,245,1) 50%, rgba(241,23,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0097f5', endColorstr='#f11713', GradientType=1 );    
+ }
+input[name=volume]::-moz-range-track { 
+    background: rgba(0,151,245,1);
+    background: linear-gradient(to right, rgba(0,151,245,1) 0%, rgba(0,151,245,1) 50%, rgba(241,23,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0097f5', endColorstr='#f11713', GradientType=1 );    
+}
+input[name=playbackRate]::-webkit-slider-runnable-track { background: #C02425; background: -webkit-linear-gradient(to right, #F0CB35, #C02425); background: linear-gradient(to right, #F0CB35, #C02425); }
+input[name=playbackRate]::-moz-range-track { background: #C02425; background: -webkit-linear-gradient(to right, #F0CB35, #C02425); background: linear-gradient(to right, #F0CB35, #C02425); }
+
+
+input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: rgba(255,255,255,1);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: 0px;
+    box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+
+input[type=range]::-moz-range-track {
+    width: 25%;
+    height: 15px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: #ffffff;
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: #FF3B46;;
+    cursor: pointer;
+}
+
+.player__fullscreen {
+    background:#000;
+    position: fixed; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    max-width: 100%; 
+    max-height: 100%;
+    width: auto; 
+    height: auto; 
+    z-index: 999;
+}
+
+#player__slider_menu{
+    flex-basis:25%;
+    margin-right:25px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+#player__slider_menu * {
+    list-style-type:none;
+    color:#FFF;
+    position:absolute;
+}
+
+#player__slider_menu {
+    display:flex;
+    flex-direction:row;
+    flex-basis:1;
+    justify-content:flex-end;
+}
+
+#player__slider_menu .player__control {
+    width:15px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    text-align:center;
+}
+
+.player__control_item img {
+    height:20px;
+    width:20px;
+}
+
+#player__slider_menu .player__control_item_selection {
+    display:none;
+    height:100px;
+    flex-direction:column;
+    justify-content:space-around;
+    border-radius: 3px 3px 0 0;
+    position:absolute;
+    z-index:9999;
+    bottom: 100%;
+    opacity:1;
+    transform: translateY(-0px);
+}
+
+.player__control_item_selection li {
+    width:100%;
+    display:flex;
+    margin-left:-143%;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.player__control_item:hover,
+player__control_item_selection:hover {
+    cursor:pointer;
+}
+
+#player__slider_menu .player__control:hover .player__control_item_selection {
+    display:flex;
+    animation-name:fadeIn;
+    animation-duration:0.5s;
+    animation-iteration-count:1;
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+

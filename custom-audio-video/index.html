@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Video</title>
+    <link rel="shortcut icon" href="../project-feature-assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Trade+Winds" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Custom Video</h1>
+<div id ="wrapper">
+
+    <div class="player">
+        <video class="player__video viewer" src="demo-media/video.mp4"></video> 
+        <div class="player__controls">
+            <div class="progress">
+                <div class="progress__filled"></div>
+            </div>
+            <button class="player__button toggle" title="Toggle Play"><img class="playButtonIcon" src="media-icons/play.svg" height="20px" width="20px"></button>
+  
+            <ul id="player__slider_menu">
+                <ul class="player__control">
+                    <li class="player__button player__control_item"><img class="volumeButtonIcon" src="media-icons/volume-medium.svg"></li>
+                    <ul class="player__control_item_selection">
+                        <li><input type="range" name="volume" class="player__slider" min="0" max="1" step="0.05" value="1"></li>
+                    </ul>
+                </ul> 
+                <ul class="player__control">
+                    <li class="player__button player__control_item"><img class="playrateButtonIcon" src="media-icons/playrate.svg"></li>
+                    <ul class="player__control_item_selection">
+                        <li><input type="range" name="playbackRate" class="player__slider" min="0.5" max="2" step="0.5" value="1"></li>
+                    </ul>
+                </ul>
+            </ul>
+        
+            <button data-skip="-15" class="player__button">« 15s</button>
+            <button data-skip="15" class="player__button">15s »</button>
+            <button class="player__button player__fullscreenButton"><img src="media-icons/fullscreen.svg" height="20px" width="20px"></button>
+        </div>
+    </div>
+
+</div> <!-- /wrapper -->
+
+<script src="scripts.js"></script>
+</body>
+</html>

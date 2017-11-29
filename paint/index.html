@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paint</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Tangerine" rel="stylesheet">
+  <link rel="shortcut icon" href="../project-feature-assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="menu">
+  <h1>Paint <span> in HTML5</span></h1>
+  <div id="nav-cont">
+    <nav>
+        <div>
+          <label for="stroke-color">Color:</label>
+          <input id="stroke-color" name="stroke-color" type="color" value="#FF0000">
+        </div>
+        <div>
+            <label for="background-color">Background Color:</label>
+            <input id="background-color" name="background-color" type="color" value="#FFFFFF">
+        </div>
+        <div>
+            <label for="line-width">Brush Size:</label>
+            <input id="line-width" name="line-width" type="range" min="0" max="500" step="5" value="10">
+        </div>
+        <div>
+          <button id="clearCanvas">Clear the Canvas</button>
+        </div>
+        <div id="saveCanvas">
+          <a id="downloadLink" download="your_file_name.jpg">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#FFF" d="M448 0h-448v512h512v-448l-64-64zM256 64h64v128h-64v-128zM448 448h-384v-384h32v160h288v-160h37.489l26.511 26.509v357.491z"></path>
+              </svg>
+            </a>
+        </div>
+
+    </nav>
+  </div>
+
+</div>
+
+<canvas id="draw"></canvas>
+
+
+
+<script src="scripts.js"></script>
+</body>
+</html>

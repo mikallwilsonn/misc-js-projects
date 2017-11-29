@@ -19,7 +19,26 @@
           <input id="stroke-color" name="stroke-color" type="color" value="#FF0000">
         </div>
         <div>
-            <label for="background-color">Background Color:</label>
+            <label for="blend-type">Blend Type:</label>
+            <select id="blend-type" name="blend-type">
+                <option value="none">None</option>
+                <option value="multiply">Multiply</option>
+                <option value="screen">Screen</option>
+                <option value="overlay">Overlay</option>
+                <option value="lighten">Lighten</option>
+                <option value="color-dodge">Color Dodge</option>
+                <option value="color-burn">Color Burn</option>
+                <option value="hard-light">Hard Light</option>
+                <option value="soft-light">Soft Light</option>
+                <option value="difference">Difference</option>
+                <option value="exclusion">Exclusion</option>
+                <option value="hue">Hue</option>
+                <option value="color">Color</option>
+                <option value="luminosity">Luminosity</option>
+            </select>
+        </div>
+        <div>
+            <label for="background-color">Color Splash:</label>
             <input id="background-color" name="background-color" type="color" value="#FFFFFF">
         </div>
         <div>
@@ -35,6 +54,9 @@
                 <path fill="#FFF" d="M448 0h-448v512h512v-448l-64-64zM256 64h64v128h-64v-128zM448 448h-384v-384h32v160h288v-160h37.489l26.511 26.509v357.491z"></path>
               </svg>
             </a>
+        </div>
+        <div>
+          <span id="question">?</span>
         </div>
 
     </nav>

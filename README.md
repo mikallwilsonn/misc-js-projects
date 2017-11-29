@@ -43,8 +43,18 @@ Simple analog clock app with rotating second, minute, and hour hands. As well as
     
 ### Photo Fun
 Photo Fun is an app that gives you controls to play around with different CSS filter settings.  
-[View Photo Fun on CodePen](https://codepen.io/mikallwilsonn/pen/rYrWad)  
+[View Photo Fun on CodePen](https://codepen.io/mikallwilsonn/pen/rYrWad)    
   
-
+    
+### Custom Video
+Custom video is just as it says, a custom HTML5 video element.  
+  
+    
+### Paint
+Paint takes advantage of the HTML5 canvas element and lets users paint on the screen. You can choose your brush color, brush size, choose a blend type (similar to Photoshop), splash color all over the canvas, clear the canvas, as well as save a copy of the canvas as a JPG image file.  
+[View Paint on CodePen](https://codepen.io/mikallwilsonn/pen/vWVdgv)    
+  
+    
+      
 ## Upcoming Additions
 **More projects to be added over time...**

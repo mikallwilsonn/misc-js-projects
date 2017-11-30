@@ -83,6 +83,17 @@ document.addEventListener('keydown', function( e ) {
     }
 });
 
+document.addEventListener('keydown', function( e ) {
+    if ( e.keyCode == 82 ) {
+        randomColor();
+    } 
+} );
+
+function randomColor() {
+    color.value = '#' + ("000000" + Math.random().toString(16).slice(2, 8).toUpperCase()).slice(-6);
+    ctx.strokeStyle = color.value;
+}
+
 function download() {
     let confirmClear = confirm('Are you sure you want to save a copy?');
     if ( confirmClear == true ) {
@@ -100,5 +111,5 @@ blendType.addEventListener( 'change', function() {
 });
 
 question.addEventListener( 'click', function() {
-    alert('You can press the letter "c" at any time to clear the canvas. \n You can also press the " [ " key to decrease brush size, or press " ] " to increase brush size as you go.');
+    alert('You can press the letter "c" at any time to clear the canvas. \n The " [ " key to decrease brush size, and the " ] " key will increase brush size as you go. \n The "r" key will pick a random color.');
 });

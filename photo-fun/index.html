@@ -24,7 +24,7 @@
         <span class="control">
             <label for="base">Base Color:</label>
             <input id="base" type="color" name="base" value="#FF404C">
-        </span> <br >
+        </span> 
 
         <span class="control">
             <label for="spacing">Border:</label>
@@ -34,11 +34,21 @@
         <span class="control">   
             <label for="border-radius">Rounded Corners:</label>
             <input id="border-radius" type="range" name="border-radius" min="0" max="100" value="0" data-sizing="%">
-        </span>
+        </span><br>
 
         <span class="control">   
                 <label for="rotate-image">Rotate Image:</label>
                 <input id="rotate-image" type="range" name="rotate-image" min="0" max="359" value="0" data-sizing="deg">
+        </span>
+
+        <span class="control">   
+                <label for="rotate-x">Rotate Image (X-axis):</label>
+                <input id="rotate-x" type="range" name="rotate-x" min="0" max="359" value="0" data-sizing="deg">
+        </span>
+
+        <span class="control">   
+                <label for="rotate-y">Rotate Image (Y-axis):</label>
+                <input id="rotate-y" type="range" name="rotate-y" min="0" max="359" value="0" data-sizing="deg">
         </span>
         <br >
 
@@ -92,7 +102,7 @@
         <br>
         <button id="see-original" class="so-dark">Compare to Original (Click &amp; Hold)</button>
 
-    </div>
+    </div><br>
 
     <div id="img-container">
          <img src="initial-img.jpg" class="styled">

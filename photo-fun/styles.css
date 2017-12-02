@@ -13,6 +13,7 @@
     --opacity:100%;
     --saturate:100%;
     --sepia:0%;
+    --rotate-image: 0deg;
 
     --light-texture: url(texture-light.png) repeat;
     --dark-texture: url(texture-dark.png) repeat;
@@ -88,6 +89,7 @@ img {
     padding: var(--spacing);
     background: var(--base);
     border-radius: var(--border-radius);
+    transform: rotate(var(--rotate-image));
     filter: blur(var(--blur))
                 brightness(var(--brightness))
                 contrast(var(--contrast))
